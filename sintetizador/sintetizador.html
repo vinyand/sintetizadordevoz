@@ -16,6 +16,8 @@
       const synth = window.speechSynthesis;
       const utterance = new SpeechSynthesisUtterance(text);
       synth.speak(utterance);
+      utterance.lang = 'pt-BR'; // idioma em português do Brasil
+      utterance.voice = voices[1]; // seleciona a segunda voz disponível
     }
   </script>
 </body>
