@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sintetizador de Voz BR</title>
+</head>
+<body>
+  <h1>Sintetizador de VOZ</h1>
+  <form>
+    <label for="text">Texto:</label><br>
+    <textarea id="text" rows="4" cols="50"></textarea><br>
+    <button type="button" onclick="speak()">Sintetizar</button>
+  </form> 
+  <script>
+    function speak() {
+      const text = document.getElementById("text").value;
+      const synth = window.speechSynthesis;
+      const utterance = new SpeechSynthesisUtterance(text);
+      synth.speak(utterance);
+    }
+  </script>
+</body>
+</html>
